@@ -1,0 +1,80 @@
+// 背景图片地址和大小
+$important: !default;
+@mixin bis($url) { 
+	background-image: url($url);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+@mixin borderRadius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+    border-radius: $radius;
+}
+//定位全屏
+@mixin allcover{
+	position:absolute;
+	top:0;
+	right:0;
+}
+
+//定位上下左右居中
+@mixin center {  
+	position: absolute;
+	top: 50%;
+    left: 50%;
+	transform: translate(-50%, -50%);
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+//定位上下居中
+@mixin ct {  
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+}
+
+//定位左右居中
+@mixin cl {  
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+}
+//宽高
+@mixin wh($width, $height){
+	width: $width;
+	height: $height;
+}
+//字体大小、行高、字体
+@mixin font($size, $color, $family: 'PingFangSC-Regular') {  
+	font-size: $size;
+	color: $color;
+	letter-spacing: 0;
+	font-family: $family;
+}
+//字体大小，颜色
+@mixin sc($size, $color,$import:$important){
+	font-size: $size $import;
+	color: $color $import;
+}
+
+//flex 布局和 子元素 对其方式
+@mixin fj($type: space-between){
+	display: flex;
+	display: -webkit-flex;
+	justify-content: $type;
+
+}
+//当设计图为375尺寸时换算rem
+@function  px2rem($px){
+	@return $px / 50px * 1rem;
+}
