@@ -15,26 +15,34 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: "babel-loader",
-        query: {
-          presets: ["es2015", "react","stage-0"]
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['es2015', 'stage-0', 'react'],
+            plugins: [
+              ['import', {
+                "libraryName": "material-ui",
+                "style": true
+              }]
+            ]
+          }
         }
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: "url-loader"
+        use: ["url-loader"]
       },
       {
         test: /\.css$/,
-        loader: "style-loader!css-loader"
+        use: ["style-loader", "css-loader"]
       },
       {
         test: /\.scss$/,
-        loaders: ["style-loader", "css-loader", "sass-loader"]
+        use: ["style-loader", "css-loader", "sass-loader"]
       },
       {
         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: "url-loader"
+        use: ["url-loader"]
       }
     ]
   },
