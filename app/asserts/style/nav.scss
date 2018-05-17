@@ -1,0 +1,18 @@
+@import './mixin.scss';
+.menuBox {
+    position: relative;
+    width: 100%;
+    background: #26C6DA;
+    .title{
+        @include ct;
+        display: inline-block;
+        color: #FFCA28;
+        font-size: 20px;
+        font-family: "YouYuan";
+        span{
+            font-size: 14px;
+            font-family: "Tahoma";
+            margin-right: 5px;
+        }
+    }
+}
