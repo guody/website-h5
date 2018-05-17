@@ -2,6 +2,8 @@ import React from "react";
 import Paper from 'material-ui/Paper';
 import Menu from 'material-ui/Menu';
 import MenuItem from 'material-ui/MenuItem';
+
+import {Link} from 'react-router-dom';
 import "../asserts/style/nav.scss"
 
 class Nav extends React.Component {
@@ -21,10 +23,10 @@ class Nav extends React.Component {
             <div className="menuBox">
                 <Paper style={style}>
                     <Menu>
-                        <MenuItem style={itemStyle} primaryText="首页" />
-                        <MenuItem style={itemStyle} primaryText="全部文章" />
-                        <MenuItem style={itemStyle} primaryText="图片" />
-                        <MenuItem style={itemStyle} primaryText="个人资料" />
+                        <Link to='/'><MenuItem style={itemStyle} primaryText="首页"/></Link>
+                        <Link to='/article'><MenuItem style={itemStyle} primaryText="全部文章" /></Link>
+                        <Link to='/picture'><MenuItem style={itemStyle} primaryText="图片" /></Link>
+                        <Link to='/personal'><MenuItem style={itemStyle} primaryText="个人资料" /></Link>
                     </Menu>
                 </Paper>
                 <div className="title"><span className="wel">WELCOME</span>郭小迪的个人网站</div>

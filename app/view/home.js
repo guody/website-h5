@@ -2,14 +2,10 @@ import React from "react";
 import http from "../util/http.js";
 import api from "../api/api.js";
 
-class Home extends React.Component {
-    render(){
-        return(
-            <div>
-                home
-            </div>
-        )
-    }
-}
+const Home = () => (
+  <div>
+    <h1>Welcome to the Tornadoes Website!</h1>
+  </div>
+)
 
 export default Home;
