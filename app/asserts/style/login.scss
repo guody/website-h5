@@ -1,0 +1,16 @@
+@import './mixin.scss';
+.mainBox{
+    width: 100%;
+    height:100%;
+    background:#00BCD4;
+    .loginBox{
+        @include center;
+        border-radius: 15px;
+        padding: 25px;
+        background: #80DEEA;
+        .btnBox {
+            text-align:center;
+        }
+    }
+    
+}

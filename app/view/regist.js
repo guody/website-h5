@@ -5,6 +5,15 @@ import {RaisedButton,TextField} from 'material-ui';
 import "../asserts/style/regist.scss"
 
 class Regist extends React.Component {
+  //类的静态属性
+  static defaultProps = { 
+    userName: "",
+    nickName: "",
+    password: "",
+    password1: ""
+  };
+
+  //构造器
   constructor(props) {
       super(props);
       // 设置 initial state
@@ -18,6 +27,7 @@ class Regist extends React.Component {
      this.submitUser = this.submitUser.bind(this);
   }
 
+  //输入框value监控
   inputChange(e) {
     const target = e.target;
     this.setState({
@@ -64,11 +74,5 @@ class Regist extends React.Component {
     );
   }
 }
-Regist.defaultProps = {
-  userName:"",
-  nickName:"",
-  password:"",
-  password1:""
-};
 
 export default Regist;

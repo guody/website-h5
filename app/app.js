@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import Regist from "./view/regist.js";
+import Login from "./view/login.js";
 import './asserts/style/common.scss'
 
 
 const App = () => (
   <MuiThemeProvider>
-    <Regist />
+    <Login />
   </MuiThemeProvider>
 );
 ReactDOM.render(<App />, document.getElementById("content"));
