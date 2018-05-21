@@ -1,7 +1,9 @@
 "use strict";
+import createHistory from 'history/createBrowserHistory'
+import axios from "axios"
+import qs from "qs"
 
-import axios from "axios";
-import qs from "qs";
+const history = createHistory()
 
 axios.interceptors.request.use(
   config => {
@@ -42,13 +44,18 @@ function checkStatus(response) {
 }
 
 function checkCode(res) {
+  console.log(res)
   // 如果code异常(这里已经包括网络错误，服务器错误，后端抛出的错误)，可以弹出一个错误提示，告诉用户
   if (res.status === -404) {
     alert(res.msg);
-  }
-  if (res.data && !res.data.success) {
+    history.push('/login');
+    return Promise.reject('Unauthorized.');
+    
+  } else if (res.data && !res.data.success) {
     alert(res.data.msg);
+
   }
+
   return res.data;
 }
 
@@ -62,7 +69,9 @@ export default {
       timeout: 10000,
       headers: {
         "X-Requested-With": "XMLHttpRequest",
-        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8"
+        "Accept": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        'Access-Token': sessionStorage.getItem('access_token') || ''
       }
     })
       .then(response => {

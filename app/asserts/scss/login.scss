@@ -6,9 +6,10 @@
     .loginBox{
         @include center;
         border-radius: 15px;
-        padding: 25px;
+        padding: 25px 60px;
         background: #80DEEA;
         .btnBox {
+            margin-top:20px;
             text-align:center;
         }
     }

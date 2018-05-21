@@ -1,21 +1,19 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import {BrowserRouter} from 'react-router-dom';
-
-import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
-import Nav from "./component/nav.js";
-import Main from "./view/main.js";
+import { Router, Route, Switch } from "react-router-dom";
 import './asserts/style/common.scss'
+import IndexRouter from "routes/IndexRouter.js";
 
+const history = createBrowserHistory();
 
 const App = () => (
-  <MuiThemeProvider>
-    <BrowserRouter>
-      <div>
-        <Nav />
-        <Main />
-      </div>
-    </BrowserRouter>
-  </MuiThemeProvider>
-);
+  <Router history={history}>
+    <Switch>
+      {indexRoutes.map((prop, key) => {
+        return <Route path={prop.path} component={prop.component} key={key} />;
+      })}
+    </Switch>
+  </Router> 
+)
+
 ReactDOM.render(<App />, document.getElementById("content"));
