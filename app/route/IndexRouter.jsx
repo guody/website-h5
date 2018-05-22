@@ -1,6 +1,6 @@
-import Home from "view/Home/Home.js";
-import Login from "view/Login/Login.js";
-import Regist from "view/Regist/Regist.js";
+import Home from "../view/Home/Home.jsx";
+import Login from "../view/Login/Login.jsx";
+import Regist from "../view/Regist/Regist.jsx";
 
 const IndexRoutes = [
     { 

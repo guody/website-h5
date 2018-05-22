@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from 'prop-types';
 import createHistory from 'history/createBrowserHistory'
-import http from "../util/http.js";
-import api from "../api/api.js";
+import http from "../../util/http.js";
+import api from "../../api/api.js";
 import {withStyles} from '@material-ui/core';
 import {Button,TextField} from '@material-ui/core';
-import "../asserts/style/login.scss"
+import "../../assets/scss/login.scss"
 
 const history = createHistory();
 

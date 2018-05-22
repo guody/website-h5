@@ -21,7 +21,7 @@ module.exports = {
             presets: ['es2015', 'stage-0', 'react'],
             plugins: [
               ['import', {
-                "libraryName": "material-ui",
+                "libraryName": "material-ui/core",
                 "style": true
               }]
             ]

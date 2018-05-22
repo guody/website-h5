@@ -1,8 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { Router, Route, Switch } from "react-router-dom";
-import './asserts/style/common.scss'
-import IndexRouter from "routes/IndexRouter.js";
+import createBrowserHistory from 'history/createBrowserHistory'
+import './assets/scss/common.scss'
+import indexRoutes from "./route/IndexRouter.jsx";
 
 const history = createBrowserHistory();
 

@@ -1,8 +1,8 @@
 import React from "react";
-import http from "../util/http.js";
-import api from "../api/api.js";
-import {RaisedButton,TextField} from 'material-ui';
-import "../asserts/style/regist.scss"
+import http from "../../util/http.js";
+import api from "../../api/api.js";
+import {Button,TextField} from '@material-ui/core';
+import "../../assets/scss/regist.scss"
 
 class Regist extends React.Component {
   //类的静态属性
