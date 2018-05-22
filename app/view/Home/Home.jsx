@@ -5,7 +5,6 @@ import Header from '../../component/Header/Header.jsx'
 
 const Home = () => (
   <div>
-    <h1>Welcome to the Tornadoes Website!</h1>
     <Header/>
   </div>
 )

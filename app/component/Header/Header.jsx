@@ -8,6 +8,7 @@ import {
     IconButton,
     Button,
     Hidden,
+    Paper,
     Drawer,
     Typography
 } from "@material-ui/core";
@@ -25,18 +26,37 @@ class Header extends React.Component {
     }
 
     render() {
+        const {
+            classes,
+            color,
+            rightLinks,
+            leftLinks,
+            brand,
+            fixed,
+            absolute
+          } = this.props;     
+             
+        const brandComponent = (
+            <Button href="#" className={classes.title}>
+                {brand}
+            </Button>
+        );
 
         return (
             <AppBar position="static" color="default">
                 <Toolbar>
-                <Typography variant="title" color="inherit">
-                    Title
-                </Typography>
+                    <Typography variant="title" color="inherit">
+                        Title
+                    </Typography>           
                 </Toolbar>
             </AppBar>
         )
     }
 
 }
+
+Header.defaultProp = {
+    color: "white"
+};
 
 export default withStyles(headerStyle)(Header);
