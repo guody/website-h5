@@ -5,7 +5,7 @@ import Header from '../../component/Header/Header.jsx'
 
 const Home = () => (
   <div>
-    <Header/>
+    <Header brand="React Material-UI"/>
   </div>
 )
 
