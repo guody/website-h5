@@ -53,10 +53,14 @@ module.exports = {
     //webpack-dev-server配置
     historyApiFallback: true, //不跳转
     noInfo: true,
+    hot:true,
     inline: true //实时刷新
   },
   performance: {
     hints: false
   },
-  devtool: "#eval-source-map"
+  devtool: "#eval-source-map",
+  plugins:[
+    new webpack.HotModuleReplacementPlugin()
+  ]
 };

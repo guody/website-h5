@@ -5,7 +5,7 @@
     "react",
     "stage-0"
   ],
-  "plugins": ["transform-runtime","transform-class-properties"],
+  "plugins": ["transform-runtime","transform-class-properties","react-hot-loader/babel"],
   "comments": false,
   "env": {
     "test": {
