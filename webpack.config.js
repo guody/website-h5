@@ -54,6 +54,7 @@ module.exports = {
     historyApiFallback: true, //不跳转
     noInfo: true,
     hot:true,
+    port: 8081,
     inline: true //实时刷新
   },
   performance: {
